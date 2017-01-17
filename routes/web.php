@@ -15,5 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/test',function(){
-	return 123;
+	return str_random(40);
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
